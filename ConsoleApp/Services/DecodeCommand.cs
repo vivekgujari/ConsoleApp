@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.Services
 {
-    class DecodeCommand
+    public static class DecodeCommand
     {
+        public static string[] Decode(string input)
+        {
+            if (input == null || input.Length == 0)
+                return null;
+
+            return input.Split(' ');
+        }
     }
 }
