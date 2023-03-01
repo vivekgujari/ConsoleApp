@@ -9,11 +9,11 @@ namespace ConsoleApp.Services
 {
     public static class CRUD
     {
-        public static void create(string key, string value, SqlConnection conn)
+        public static void create(string key, string value)
         {
-            SqlCommand command;
+            /*SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string sql = "INSERT INTO Data(Id, Name, Type) VALUES ()";
+            string sql = "INSERT INTO Data(Id, Name, Type) VALUES ()";*/
         }
     }
 }
