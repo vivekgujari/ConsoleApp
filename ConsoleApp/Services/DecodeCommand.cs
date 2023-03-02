@@ -8,9 +8,9 @@ namespace ConsoleApp.Services
 {
     public static class DecodeCommand
     {
-        public static string[] Decode(string input)
+        public static string[] decode(string input)
         {
-            if (input == null || input.Length == 0)
+            if (input.Length == 0 || input == null)
                 return null;
 
             return input.Split(' ');

@@ -1,6 +1,6 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using ConsoleApp.Services;
+using Microsoft.Data.SqlClient;
 using System;
-using System.Data.SqlClient;
 
 namespace ConsoleApp
 {
@@ -10,8 +10,9 @@ namespace ConsoleApp
         {
             Console.WriteLine("Hello World!");
             SqlConnection conn = new SqlConnection();
-            OpenDb(conn);
-            CloseDb(conn);
+            string input = Console.ReadLine();
+            string[] data = DecodeCommand.decode(input);
+            CRUD.create(data[1], data[3]);
         }
 
         private static void OpenDb(SqlConnection conn)
